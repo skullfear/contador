@@ -1,27 +1,31 @@
 print("hola,bienvenido")
 def contar_en_sistema():
-    sistema = input("Elige un sistema (decimal, octal u hexadecimal): ").lower()
+    sistema = input("Elige un sistema (binario, decimal, octal u hexadecimal): ").lower()
 
-    if sistema not in ['decimal', 'octal', 'hexadecimal']:
+    if sistema not in ['binario' , 'decimal', 'octal', 'hexadecimal']:
         print("Sistema no válido.")
         return
-    if sistema == 'decimal':
-        limite = 15  # Límite predeterminado
+    if sistema == 'binario':
+        limite =  50
+    elif sistema == 'decimal':
+        limite = 50
     elif sistema == 'octal':
-        limite = 0o17 # 0o indica un número octal en Python
+        limite = 50
     elif sistema == 'hexadecimal':
-        limite = 0xF # 0x indica un número hexadecimal en Python
+        limite = 50
 
     contador = 0
 
     while contador < limite:
         contador += 1
-        if sistema == 'octal':
-            print("Contador en octal:", oct(contador))
+        if sistema == 'binario':
+            print("Contador en binario:",bin(contador)[2:]) 
+        elif sistema == 'octal':
+            print("Contador en octal:", oct(contador)[2:])
         elif sistema == 'hexadecimal':
-            print("Contador en hexadecimal:", hex(contador))
+            print("Contador en hexadecimal:", hex(contador)[2:])
         else:
-            print("Contador en decimal:", contador)
+            print("Contador en decimal:", contador)    
 
     print("Conteo completo en", sistema)
 
