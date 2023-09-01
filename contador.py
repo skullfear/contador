@@ -1,7 +1,7 @@
 from binario import Binario
 from hexadecimal import Hexadecimal
 from octal import Octal
-from decimal import Decimal
+from decimal_1 import Decimal
 
 class Contador:
     def __init__(self, sistema, valor_inicial):
